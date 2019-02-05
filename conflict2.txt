@@ -1,3 +1,4 @@
+Function recurse ($numberIn){   
 Function recursive ($numIn){   
     $outString = ""                                                   
     for ($i = $numIn.Count; $i -lt $len; $i++){ $outString += " " }  
@@ -12,8 +13,9 @@ Function recursive ($numIn){
     if (<#$levels -eq 0#> $numOut.Count -lt 257){ return recurse($numOut) | Out-Null } else { return $numIn }                                       
 }
 
+#START MAIN
 #BEGIN
 $len = 400
 $levels = [Math]::Pow(2, 2)
 recurse(1)                                                       
-#END
+#END MAIN
