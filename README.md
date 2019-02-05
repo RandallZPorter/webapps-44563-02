@@ -5,7 +5,7 @@
 ## Our Team
 ![The Team](https://github.com/RandallZPorter/webapps-44563-02/blob/master/documents/members.PNG "The Team")
 
-## Activity Instructions
+## Activity Instructions: Using TortoiseGit to Resolve Merge Conflicts
 1. Choose a partner
 1. Create a github repository
 1. Create an empty file (conflict.txt) in the repository
