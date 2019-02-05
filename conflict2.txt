@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 local changes
-=======
-remote changes
->>>>>>> cc2a42b2610ef0f690a1da8636163367180cd289
