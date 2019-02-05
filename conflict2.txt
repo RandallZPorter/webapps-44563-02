@@ -1,4 +1,4 @@
-Function recurse ($numIn){   
+Function recursive ($numIn){   
     $outString = ""                                                   
     for ($i = $numIn.Count; $i -lt $len; $i++){ $outString += " " }  
     $numIn | ForEach-Object -process { if ([string]$_ -ne [string]"1"){$outString += "  "} else {$outString += " " + "*"} }       
@@ -12,7 +12,7 @@ Function recurse ($numIn){
     if (<#$levels -eq 0#> $numOut.Count -lt 257){ return recurse($numOut) | Out-Null } else { return $numIn }                                       
 }
 
-#START
+#BEGIN
 $len = 400
 $levels = [Math]::Pow(2, 2)
 recurse(1)                                                       
