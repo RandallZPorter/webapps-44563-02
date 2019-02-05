@@ -1,1 +1,19 @@
-remote changes
+Function recurse ($numIn){   
+    $outString = ""                                                   
+    for ($i = $numIn.Count; $i -lt $len; $i++){ $outString += " " }  
+    $numIn | ForEach-Object -process { if ([string]$_ -ne [string]"1"){$outString += "  "} else {$outString += " " + "*"} }       
+    Write-Host $outString                                         
+    [System.Collections.ArrayList]$numOut = @()      
+                                                                    
+    $numOut.Add(1) | Out-Null
+    for ($i = 0; $i -lt $numIn.Count - 1; $i++){ $numOut.Add([Math]::Abs($numIn[$i] - $numIn[$i + 1])) | Out-Null }  
+    $numOut.Add(1) | Out-Null
+    $levels -= 1
+    if (<#$levels -eq 0#> $numOut.Count -lt 257){ return recurse($numOut) | Out-Null } else { return $numIn }                                       
+}
+
+#START
+$len = 400
+$levels = [Math]::Pow(2, 2)
+recurse(1)                                                       
+#END
